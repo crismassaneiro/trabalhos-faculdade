@@ -21,7 +21,7 @@
     height: 100%;
     opacity: 0;
     transition: opacity 2s ease;
-    max-width: 1200px;
+    max-width: 100%;
     max-height: 500px;
   }
   
