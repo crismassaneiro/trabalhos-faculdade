@@ -1,0 +1,169 @@
+
+.def-section{
+  width: 100%;
+  clear: both;
+}
+.top-banner{
+  padding: 60px 0;
+  background: url('bg-top.jpg') center;
+  background-size: cover;
+  margin-top: 10px;
+    margin-bottom: 20px;
+  h3{
+    color: white;
+  }
+}
+.def-title{
+  h2,h3,h4{
+    font-size: 36px;
+    text-transform: uppercase;
+    width: 100%;
+    &:after{
+      content: '';
+      width: 80px;
+      display: block;
+      height: 3px;
+      border-bottom: 2px dotted;
+      clear: both;
+      margin-top: 14px;
+      margin-bottom: 20px;
+    }
+  }
+  margin-bottom: 20px;
+}
+.text-center{
+  text-align: center;
+  *{
+    &:after{
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+.top-banner h3 {
+  color: #fff;
+}
+.def-title h2, .def-title h3, .def-title h4 {
+  font-size: 36px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+
+/* Estilos para a tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para a classe 'container' */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Estilos para as classes de saída e chegada */
+.saida, .chegada {
+  display: flex;
+  align-items: center;
+}
+
+.saida label, .chegada label {
+  font-weight: bold;
+}
+
+.chegada div {
+  margin-bottom: 8px;
+}
+
+.tempoViagem {
+  display: flex;
+  align-items: center;
+  color: #888;
+}
+
+.tempoViagem i {
+  margin-right: 4px;
+}
+
+/* Estilos para a classe de dias */
+.dias {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.dia, .diaPossui {
+  padding: 4px;
+  margin-right: 4px;
+  border-radius: 4px;
+  background-color: #eee;
+}
+
+.diaPossui {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+/* Estilo para a classe de modalidade */
+.modalidade {
+  margin-bottom: 8px;
+}
+
+/* Estilos para a classe de descrição */
+.descricao {
+  margin-bottom: 8px;
+}
+
+/* Estilos para a classe de seguro */
+.seguro {
+  margin-bottom: 8px;
+}
+
+.float-right {
+  float: right;
+}
+
+/* Estilos para os tooltips */
+[data-toggle="tooltip"] {
+  position: relative;
+  cursor: pointer;
+}
+
+[data-toggle="tooltip"]:before {
+  content: attr(title);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  display: none;
+  padding: 4px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+[data-toggle="tooltip"]:hover:before {
+  display: block;
+}
+
+.nomeCidadeSelecionada{
+  background: #002581; 
+  height: 50px; 
+  border-radius: 30px; 
+  padding: 15px; 
+  cursor: pointer; 
+  color: #fff; 
+  border: none; 
+  
+  margin-top: 30px; 
+  margin-bottom: 30px; 
+  margin-right: 20px; 
+  margin-left: 50px;
+}
