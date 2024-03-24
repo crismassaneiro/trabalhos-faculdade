@@ -5,6 +5,17 @@
     margin: 0 auto;
   }
 
+  .h2 {
+    background-color: #002581;
+    display: block; /* ou inline-block */
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    height: 100px;
+    line-height: 100px; /* Para centralizar verticalmente */
+  }
+  
+
 a{
   text-decoration: none;
 }
@@ -30,3 +41,7 @@ a{
     height: 130px;
     width: 290px;
   }
+
+  .button:hover {
+    background-color: #004ca3; /* Cor do background ao passar o mouse */
+}
