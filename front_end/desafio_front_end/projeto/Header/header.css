@@ -25,15 +25,18 @@
   align-items: center;
 }
 
-.login-button {
+.menu-button {
   background: #002581;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 50px;
-  margin-left: auto; /* Move o botão de login para a direita */
-  margin-right: 15px; /* Espaçamento entre o botão de login e os demais botões */
+  margin: 0 15px;
   cursor: pointer;
+}
+
+.menu-button:hover {
+  background: #004ba0; /* Mudança de cor ao passar o mouse */
 }
 
 .dropdown-content {
