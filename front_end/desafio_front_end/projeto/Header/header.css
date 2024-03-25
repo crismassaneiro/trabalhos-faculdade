@@ -67,12 +67,6 @@
   border-color: #002581;
 }
 
-.menu-button {
-  background: #002581;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 50px;
-  margin: 0 15px;
-  cursor: pointer;
+.show {
+  display: block;
 }
