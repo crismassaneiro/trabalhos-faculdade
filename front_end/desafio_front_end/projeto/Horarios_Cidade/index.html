@@ -32,23 +32,45 @@
     </script>
   </head>
 
-  <header>
-    <div class="container_header">  
-        <div class="menu">
-
-            <div class="div_logo_menu">
-                <a href="../Pagina_Inicial/index.html"><img class="logo_menu" src="../Header/img/Logo Lartic  722x250px.png" alt=""></a>     
-            </div>
-            
-            <div class="nomes_menu">
-                    <a href="../Horarios/index.html"><button style=" float: right; background: #002581; color: white; padding: 10px 20px; border: none; border-radius: 50px; margin: 0 15px; width: 120px; margin-left: 25px; cursor: pointer;">Horários</button></a>
-                    <a href="../Contato/index.html"><button style=" float: right; background: #002581; color: white; padding: 10px 20px; border: none; border-radius: 50px; margin: 0 15px; width: 120px; margin-left: 25px; cursor: pointer;">Contato</button></a>
-                    <a href="../Saiba_Mais/index.html"><button style=" float: right; background: #002581; color: white; padding: 10px 20px; border: none; border-radius: 50px; margin: 0 15px; width: 120px; margin-left: 25px; cursor: pointer;">Saiba Mais</button></a>
-                    <a href="../Pagina_Inicial/index.html"><button style=" float: right; background: #002581; color: white; padding: 10px 20px; border: none; border-radius: 50px; margin: 0 15px; width: 120px; margin-left: 25px; cursor: pointer;">Inicio</button></a>
-             </div>
-         </div>
+  <div class="container_header">
+    <div class="menu">
+      <div class="div_logo_menu">
+        <a href="/Pagina_Inicial/index.html"><img class="logo_menu" src="/front_end/desafio_front_end/projeto/Header/img/logo_unisinos.png" alt=""></a>
       </div>
-  </header>
+      <div class="nomes_menu">
+        <a href="../Cursos/index.html"><button class="menu-button">Cursos</button></a>
+        <a href="../Contato/index.html"><button class="menu-button">Contato</button></a>
+        <a href="../Saiba_Mais/index.html"><button class="menu-button">Saiba Mais</button></a>
+        <div class="dropdown">
+          <button onclick="toggleDropdown()" class="menu-button">Login</button>
+          <div id="dropdownMenu" class="dropdown-content">
+            <a href="../Login_Alunos/index.html">Aluno</a>
+            <a href="../Login_Colaboradores/index.html">Colaborador</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<script>
+  function toggleDropdown() {
+    var dropdownMenu = document.getElementById("dropdownMenu");
+    dropdownMenu.classList.toggle("show");
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.menu-button')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
   
     <body style="margin-top: auto; margin-right: auto; margin-bottom: auto; margin-left: auto;">
       

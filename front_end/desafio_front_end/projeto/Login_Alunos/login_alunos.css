@@ -14,8 +14,6 @@ body {
 .container {
     max-width: 1200px;
     width: 100%;
-    padding-left: 10%;
-    padding-right: 10px;
 }
 
 .login-container {
@@ -28,7 +26,10 @@ body {
 .login-form,
 .signup-form {
     background-color: #fff;
-    padding: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 45px;
+    padding-bottom: 30px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 50%; 
@@ -59,6 +60,7 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 button:hover {
