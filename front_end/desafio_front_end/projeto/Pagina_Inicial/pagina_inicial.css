@@ -105,3 +105,29 @@
     height: 140px;
     border-radius: 15px;
 }
+
+.container {
+
+  background-image: url('../Pagina_Inicial/imgs/imgstateofdata.png'); /* Caminho relativo para a imagem */
+  background-size: cover; /* Alterado para cover */
+  background-position: center center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita que a imagem seja repetida */
+  position: relative; /* Adicionado */
+  justify-content: center;
+}
+
+.botao {
+  position: absolute;
+  top: 79%;
+  left: 3%;
+  transform: translate(40%, 10%);
+  padding: 10px 20px;
+  background-color: #002581;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
