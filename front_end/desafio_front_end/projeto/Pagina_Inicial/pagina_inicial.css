@@ -111,12 +111,12 @@
 }
 
 .container {
-  height: 702px;
-  background-image: url('../Pagina_Inicial/imgs/imgstateofdata.png');
-  background-size: cover; /* Alterado para cover */
-  background-position: center center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Evita que a imagem seja repetida */
-  position: relative; /* Adicionado */
+  /* Remova a propriedade de plano de fundo */
+  /* background-image: url('../Pagina_Inicial/imgs/imgstateofdata.png'); */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
   justify-content: center;
 }
 
