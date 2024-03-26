@@ -36,6 +36,10 @@
     opacity: 2;
   }
 
+  .mais_procurados{
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
   .h2_mais_procurados{
     text-align: center;
     margin-right: 900px;
@@ -107,8 +111,8 @@
 }
 
 .container {
-
-  background-image: url('../Pagina_Inicial/imgs/imgstateofdata.png'); /* Caminho relativo para a imagem */
+  height: 702px;
+  background-image: url('../Pagina_Inicial/imgs/imgstateofdata.png');
   background-size: cover; /* Alterado para cover */
   background-position: center center; /* Centraliza a imagem */
   background-repeat: no-repeat; /* Evita que a imagem seja repetida */
