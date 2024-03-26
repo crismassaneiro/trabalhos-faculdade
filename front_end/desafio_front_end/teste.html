@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown no Hover</title>
+<style>
+    /* Estilo para o dropdown */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Estilo para o conteúdo do dropdown */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 120px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+
+    /* Estilo para o link dentro do dropdown */
+    .dropdown-content a {
+        color: black;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Mostra o dropdown quando o botão é passado com o mouse */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+<!-- Botão com dropdown -->
+<div class="dropdown">
+    <button style="float: right; background: #002581; color: white; padding: 10px 20px; border: none; border-radius: 50px; margin: 0 15px; width: 120px; margin-left: 25px; cursor: pointer;">Login</button>
+    <div class="dropdown-content">
+        <a href="#">Aluno</a>
+        <a href="#">Colaborador</a>
+    </div>
+</div>
+
+</body>
+</html>

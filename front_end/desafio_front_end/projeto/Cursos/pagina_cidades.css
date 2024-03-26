@@ -1,0 +1,47 @@
+.container_pagina_inicial{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .h2 {
+    background-color: #002581;
+    display: block; /* ou inline-block */
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    height: 100px;
+    line-height: 100px; /* Para centralizar verticalmente */
+  }
+  
+
+a{
+  text-decoration: none;
+}
+  .div_buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+  .button {
+    display: block;
+    margin: 0 10px;
+    background-color: #002581;
+    margin-right: 20px;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    height: 130px;
+    width: 290px;
+  }
+
+  .button:hover {
+    background-color: #004ca3; /* Cor do background ao passar o mouse */
+}

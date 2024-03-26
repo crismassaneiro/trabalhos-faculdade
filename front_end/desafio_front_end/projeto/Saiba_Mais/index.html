@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Saiba Mais</title>
+        <link rel="icon" type="image/png" href="/Pagina_Inicial/imgs/iconLartic.png">
+        <link rel="stylesheet" href="../Footer/footer.css">
+        <link rel="stylesheet" href="../Saiba_Mais/saiba_mais.css">
+        <link rel="stylesheet" href="../Header/header.css">
+        <meta charset="utf-8"/>
+    </head>
+
+    <div class="container_header">
+        <div class="menu">
+          <div class="div_logo_menu">
+            <a href="/Pagina_Inicial/index.html"><img class="logo_menu" src="/front_end/desafio_front_end/projeto/Header/img/logo_unisinos.png" alt=""></a>
+          </div>
+          <div class="nomes_menu">
+            <a href="../Cursos/index.html"><button class="menu-button">Cursos</button></a>
+            <a href="../Contato/index.html"><button class="menu-button">Contato</button></a>
+            <a href="../Saiba_Mais/index.html"><button class="menu-button">Saiba Mais</button></a>
+            <div class="dropdown">
+              <button onclick="toggleDropdown()" class="menu-button">Login</button>
+              <div id="dropdownMenu" class="dropdown-content">
+                <a href="../Login_Alunos/index.html">Aluno</a>
+                <a href="../Login_Colaboradores/index.html">Colaborador</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script>
+      function toggleDropdown() {
+        var dropdownMenu = document.getElementById("dropdownMenu");
+        dropdownMenu.classList.toggle("show");
+      }
+  
+      window.onclick = function(event) {
+        if (!event.target.matches('.menu-button')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+    </script>
+
+  <body> 
+        <div class="container_saiba_mais">
+            <div class="div_1">
+                <div class="texto1">
+                    <h2 class="h2">Nossa história</h2>
+                    <p class="paragrafo">Fundada em 1969, a Universidade do Vale do Rio dos Sinos – Unisinos, por anos consecutivos, tem sido avaliada pelo Ministério da Educação (MEC) entre as melhores universidades de ensino privado do Brasil. A Unisinos foi a primeira universidade latino-americana a receber a certificação ISO 14001 e, a convite da United Nations Academic Impact (UNAI), tornou-se a primeira universidade brasileira a ser um hub de referência de um Objetivo de Desenvolvimento Sustentável (ODS), da ONU.
+                    </p>
+                </div>
+                <div class="imagen1">
+                    <img src="../Saiba_Mais/imagens/uni01.png" alt="Imagem 1" class="img">
+                </div>
+            </div>
+
+
+            <div class="div_1">
+                <div class="imagen1">
+                    <img src="../Saiba_Mais/imagens/uni02.png" alt="Imagem 1" class="img2">
+                </div>
+                <div class="texto1">
+                    <p class="paragrafo2">Com seus mais de 150 mil alunos já diplomados, a Universidade conta com mais de 77 opções de cursos de graduação presenciais, educação a distância (EaD) e híbridos. Com raízes firmadas do Rio Grande do Sul, a Unisinos quer tornar-se a Universidade privada preferida no estado, por sua excelência em educação e qualificação na formação discente.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="div_1">
+                <div class="texto1">
+                        <p class="paragrafo1">Com diversos cursos de Mestrado e Doutorado nos Programas de Pós-Graduação, e mais de 45 opções no lato senso, a instituição mantém e desenvolve parcerias estratégicas com empresas e universidades do Brasil e do mundo. Na Unisinos, a pesquisa soma 113 projetos, com 225 pesquisadores, além de manter parceria com 181 instituições de ensino em mais de 35 países, que fortalecem a pesquisa e permitem o intercâmbio científico de alunos e pesquisadores. Estes números colocam a instituição entre as universidades de ensino privado do Brasil que mais investem em pesquisa.
+                        </p>
+                </div>
+                <div class="imagen1">
+                    <img src="../Saiba_Mais/imagens/uni03.png" alt="Imagem 1" class="img3">
+                    </div>
+            </div>
+
+
+            <div class="div_1">
+                <div class="imagen1">
+                    <img src="../Saiba_Mais/imagens/uni04.png" alt="Imagem 1" class="img2">
+                </div>
+                <div class="texto1">
+                    <p class="paragrafo2">Os cursos ofertados pela Universidade são ancorados em um conceito Escola, divididos em seis áreas: Gestão e Negócios, Saúde, Politécnica, Direito, Humanidades e Indústria Criativa. As Escolas promovem a produção do conhecimento na busca de soluções inovadoras para os desafios da sociedade.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="div_1">
+                <div class="texto1">
+                        <p class="paragrafo1">INOVAÇÃO – O Portal de Inovação da Unisinos conecta a Universidade ao mercado e transforma pesquisa e tecnologia em inovação. Os Institutos Tecnológicos são estruturados com equipamentos de alta tecnologia e atuam como parceiros de empresas e organizações, contribuindo para a competitividade e sustentabilidade do estado e do país.
+                        </p>
+                </div>
+                <div class="imagen1">
+                    <img src="../Saiba_Mais/imagens/uni05.png" alt="Imagem 1" class="img3">
+                    </div>
+            </div>
+
+            <div class="div_1">
+                <div class="imagen1">
+                    <img src="../Saiba_Mais/imagens/uni06.png" alt="Imagem 1" class="img2">
+                </div>
+                <div class="texto1">
+                    <p class="paragrafo2">Com mais de 20 anos de existência, o Parque Tecnológico de São Leopoldo – Tecnosinos é um dos parques mais sólidos da América Latina, reunindo mais de 100 empresas consolidadas, graduadas e incubadas, além de startups. O Parque auxilia o desenvolvimento sustentável da região, gerando cerca de 8 mil empregos diretos de alto valor, aumento da arrecadação e criação de uma cultura empreendedora.
+                    </p>
+                </div>
+            </div>
+
+            <div class="div_1">
+                <div class="texto1">
+                        <p class="paragrafo1">No Tecnosinos, companhias globais se unem a dezenas de startups incubadas e graduadas na Incubadora Unisinos (Unitec), gerando inovação que movimenta a economia. A Incubadora é uma unidade de negócios da Unisinos que fomenta e executa inovações tecnológicas, integrando conhecimento acadêmico e empresas por meio de pesquisa aplicada.
+                        </p>
+                </div>
+                <div class="imagen1">
+                    <img src="../Saiba_Mais/imagens/uni07.png" alt="Imagem 1" class="img3">
+                    </div>
+            </div>      
+        </div>
+ </body>
+</html>

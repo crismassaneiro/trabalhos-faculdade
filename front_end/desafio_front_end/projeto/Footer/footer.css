@@ -1,0 +1,106 @@
+footer {
+    background-color: #002581;
+    padding-top: 20px;
+  }
+
+  
+  .container {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+  }
+  
+  .column1 {
+    flex-basis: 25%;
+    margin-top: 25px;
+  }
+
+  .column2 {
+    flex-basis: 25%;
+    margin-top: 25px;
+  }
+  .column3 {
+    flex-basis: 25%;
+    margin-top: 25px;
+    align-items: center;
+    text-align: center;
+  }
+  .column4 {
+    flex-basis: 25%;
+  }
+
+  .linha-branca {
+    width: 100%;
+    height: 1px;
+    background-color: white; /* Define a cor branca de fundo */
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+
+  
+a{
+  text-decoration: none;
+}
+
+  .logo_footer{
+    margin-top: 20px;
+    width: 65%;
+  }
+
+  .nomes_menu1{
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+  }
+
+  .nomes_menu2{
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+  }
+
+  .nomes_menu3{
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+  }
+
+ .img_redes_footer{
+    justify-items: center;
+     margin-top: 10px;
+     margin-right: 10px;
+     height: 25px
+  }
+
+  .sac{
+    text-align: center;
+    color: white;
+  }
+
+  .texto_c4{
+    text-align: center;
+    font-size: 10px;
+    color: white;
+  }
+
+  .copyright{
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    padding-bottom: 10px;
+  }

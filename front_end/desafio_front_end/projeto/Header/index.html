@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+  <header>
+    <div class="container_header">
+      <div class="menu">
+        <div class="div_logo_menu">
+          <a href="/Pagina_Inicial/index.html"><img class="logo_menu" src="/front_end/desafio_front_end/projeto/Header/img/logo_unisinos.png" alt=""></a>
+        </div>
+        <div class="nomes_menu">
+          <a href="../Cursos/index.html"><button class="menu-button">Cursos</button></a>
+          <a href="../Contato/index.html"><button class="menu-button">Contato</button></a>
+          <a href="../Saiba_Mais/index.html"><button class="menu-button">Saiba Mais</button></a>
+          <div class="dropdown">
+            <button onclick="toggleDropdown()" class="menu-button">Login</button>
+            <div id="dropdownMenu" class="dropdown-content">
+              <a href="../Login_Alunos/index.html">Aluno</a>
+              <a href="../Login_Colaboradores/index.html">Colaborador</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <script>
+    function toggleDropdown() {
+      var dropdownMenu = document.getElementById("dropdownMenu");
+      dropdownMenu.classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.menu-button')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
