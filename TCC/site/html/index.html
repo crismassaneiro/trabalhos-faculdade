@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clouds</title>
-  <link rel="stylesheet" href="../css/estilo-comum.css"> <!-- Importação do CSS comum -->
   <link rel="icon" href="../imgs/header/fiveicon.png" type="image/x-icon"> <!-- Favicon -->
+  
+  <link rel="stylesheet" href="../css/footer.css"> <!-- Importação do CSS comum -->
+  <link rel="stylesheet" href="../css/estilo-comum.css"> <!-- Importação do CSS comum -->
   <link rel="stylesheet" href="../css/carrosel.css">
+  <link rel="stylesheet" href="../css/pagina_inicial.css">
 </head>
 
 <body>
@@ -14,61 +17,69 @@
   <header-placeholder></header-placeholder> <!-- Espaço reservado para o cabeçalho -->
   <script src="../js/load-header.js"></script> <!-- JS para carregar o cabeçalho -->
 
-  <div class="carrossel">
-    <div class="carrossel-slides">
-      <div class="carrossel-slide">
-        <img src="../imgs/carrosel/slide1.png" alt="Slide 1">
-        <div class="carrossel-caption">Legenda do Slide 1</div>
+  <!-- Contêiner para limitar a largura da página -->
+  <div class="container">
+    <div class="carrossel">
+      <div class="carrossel-slides">
+        <div class="carrossel-slide">
+          <img src="../imgs/carrosel/slide1.png" alt="Slide 1">
+          <div class="carrossel-caption">Legenda do Slide 1</div>
+        </div>
+        <div class="carrossel-slide">
+          <img src="../imgs/carrosel/slide2.png" alt="Slide 2">
+          <div class="carrossel-caption">Legenda do Slide 2</div>
+        </div>
+        <div class="carrossel-slide">
+          <img src="../imgs/carrosel/slide3.png" alt="Slide 3">
+          <div class="carrossel-caption">Legenda do Slide 3</div>
+        </div>
       </div>
-      <div class="carrossel-slide">
-        <img src="../imgs/carrosel/slide2.png" alt="Slide 2">
-        <div class="carrossel-caption">Legenda do Slide 2</div>
-      </div>
-      <div class="carrossel-slide">
-        <img src="../imgs/carrosel/slide3.png" alt="Slide 3">
-        <div class="carrossel-caption">Legenda do Slide 3</div>
+
+      <!-- Botões de controle -->
+      <button class="carrossel-control-prev">❮</button>
+      <button class="carrossel-control-next">❯</button>
+
+      <!-- Indicadores -->
+      <div class="carrossel-indicators">
+        <button></button>
+        <button></button>
+        <button></button>
       </div>
     </div>
-  
-    <!-- Botões de controle -->
-    <button class="carrossel-control-prev">❮</button>
-    <button class="carrossel-control-next">❯</button>
-  
-    <!-- Indicadores -->
-    <div class="carrossel-indicators">
-      <button></button>
-      <button></button>
-      <button></button>
+
+    <div class="content-section">
+      <div class="div-1">
+          <h2>Treinamento disponível</h2>
+      </div>
+      <div class="div-2">
+          <img src="../imgs/logos_aws/1-practitioner.png" alt="Imagem 1">
+      </div>
+      <div class="div-3">
+          <h2>Em breve</h2>
+      </div>
+      <div class="div-4">
+          <div class="image-grid">
+              <img src="../imgs/logos_aws/1-practitioner.png" alt="Imagem 1">
+              <img src="../imgs/logos_aws/2 - AI Practitioner.png" alt="Imagem 2">
+              <img src="../imgs/logos_aws/3 - solutions architect.png" alt="Imagem 3">
+              <img src="../imgs/logos_aws/4 - devops engineer.png" alt="Imagem 4">
+              <img src="../imgs/logos_aws/5 - solutions architect.png" alt="Imagem 5">
+              <img src="../imgs/logos_aws/6 - developer.png" alt="Imagem 6">
+              <img src="../imgs/logos_aws/7 - sysops administrator.png" alt="imagem 7">
+              <img src="../imgs/logos_aws/8 - machine learning engeneering.png" alt="Imagem 8">
+              <img src="../imgs/logos_aws/9 - data engineer.png" alt="Imagem 9">
+              <img src="../imgs/logos_aws/10 -security.png" alt="Imagem 10">
+              <img src="../imgs/logos_aws/11 - machine learning.png" alt="Imagem 11">
+              <img src="../imgs/logos_aws/12 - advanced networking.png" alt="Imagem 12">
+          </div>
+      </div>
     </div>
-  </div>
+  </div> <!-- Fim do contêiner -->
 
   <script src="../js/carrosel.js"></script>
-  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<footer-placeholder></footer-placeholder>
-<script src="../js/load-footer.js"></script>
+  <footer-placeholder></footer-placeholder>
+  <script src="../js/load-footer.js"></script>
 </body>
+
 </html>

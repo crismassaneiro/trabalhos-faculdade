@@ -1,0 +1,53 @@
+.container {
+    max-width: 1200px; /* Defina a largura máxima que você deseja, por exemplo, 1200px */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 0 20px; /* Adiciona algum espaçamento lateral (opcional) */
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column; /* Exibir as divs uma abaixo da outra */
+    gap: 20px; /* Espaçamento entre as divs */
+
+}
+
+.div-1{
+    background-color: #8605B8; /* Cor de fundo colorida */
+    padding: 20px;
+    text-align: left; /* Alinhamento à esquerda */
+    border-radius: 0 0 8px 8px;
+}
+
+.div-3 {
+    background-color: #8605B8; /* Cor de fundo colorida */
+    padding: 20px;
+    text-align: left; /* Alinhamento à esquerda */
+    border-radius: 8px;
+}
+
+.div-2, .div-4 {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.div-2 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Atualização para imagens lado a lado */
+.image-row {
+    display: flex; /* Exibe todas as imagens em uma linha */
+    flex-wrap: nowrap; /* Garante que elas não quebrem para outra linha */
+    overflow-x: auto; /* Adiciona rolagem horizontal se o espaço for insuficiente */
+    gap: 10px; /* Espaço entre as imagens */
+}
+
+.image-row img {
+    width: auto;
+    height: 100px; /* Ajuste de altura das imagens */
+    border-radius: 4px;
+}
