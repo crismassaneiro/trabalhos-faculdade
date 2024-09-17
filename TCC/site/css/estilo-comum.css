@@ -14,18 +14,25 @@ html, body {
   box-sizing: border-box;
 }
 
-/* Estilo para o cabeçalho */
+/* Limitar a largura do cabeçalho */
+.header-container {
+  max-width: 1200px; /* Defina a largura máxima do cabeçalho */
+  margin: 0 auto; /* Centraliza o contêiner do cabeçalho */
+  padding: 0 20px; /* Adiciona espaçamento lateral */
+  display: flex; /* Mantém o layout flex para o conteúdo */
+  justify-content: space-between; /* Espaçar os itens */
+  align-items: center; /* Centralizar verticalmente os itens */
+}
+
+/* Restante do estilo do cabeçalho (já existente) */
 header {
   background-color: #ffffff; /* Cor de fundo do cabeçalho */
   color: white; /* Cor do texto do cabeçalho */
-  padding: 10px 20px; /* Espaçamento interno do cabeçalho */
-  display: flex; /* Usar flexbox para alinhar os itens */
-  justify-content: space-between; /* Espaçar os itens */
-  align-items: center; /* Centralizar verticalmente os itens */
-  width: 100%; /* Garantir que o cabeçalho ocupe toda a largura da tela */
+  width: 100%; /* O cabeçalho ocupará toda a largura da tela */
   box-sizing: border-box; /* Incluir padding e border no cálculo da largura */
   border-bottom: 4px solid #8605B8; /* Barrinha roxa na parte inferior do cabeçalho */
   border-top: none; /* Nenhuma borda no topo do cabeçalho */
+  padding: 10px 0; /* Ajuste no padding para não atrapalhar o layout */
 }
 
 /* Estilo para o logo */
