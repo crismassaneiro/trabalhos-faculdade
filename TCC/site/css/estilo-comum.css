@@ -95,6 +95,19 @@ nav ul li a {
   border-radius: 5px; /* Cantos arredondados dos links */
   font-family: 'Segoe UI Rounded', 'Arial Rounded MT Bold', sans-serif; /* Fonte moderna e arredondada */
   font-weight: bold; /* Estilo em negrito */
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Transição suave para cor e aumento */
+}
+
+/* Efeito hover */
+nav ul li a:hover {
+  color: #C586E0; /* Cor roxa mais fraca ao passar o mouse */
+
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho do texto */
+}
+
+/* Estilo para o link ativo */
+nav ul li a.active {
+  border-bottom: 2px solid #ff6600; /* Linha embaixo do link ativo */
 }
 
 
