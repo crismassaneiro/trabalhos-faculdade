@@ -8,33 +8,61 @@
     display: flex;
     flex-direction: column; /* Exibir as divs uma abaixo da outra */
     gap: 20px; /* Espaçamento entre as divs */
-
 }
 
-.div-1{
-    background-color: #8605B8; /* Cor de fundo colorida */
+.div-1 {
+    background-color: #8605B8;
     padding: 20px;
-    text-align: left; /* Alinhamento à esquerda */
+    text-align: left;
     border-radius: 0 0 8px 8px;
+    color: white;
+    font-family: 'Segoe UI Rounded', 'Arial Rounded MT Bold', sans-serif;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transição suave */
 }
+
+.div-1:hover {
+    color: #ffffff; /* Muda a cor do texto ao passar o mouse */
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8); /* Muda a sombra do texto ao passar o mouse */
+}
+
 
 .div-3 {
     background-color: #8605B8; /* Cor de fundo colorida */
     padding: 20px;
     text-align: left; /* Alinhamento à esquerda */
     border-radius: 8px;
+    color: white; /* Cor do texto */
+    font-family: 'Segoe UI Rounded', 'Arial Rounded MT Bold', sans-serif; /* Fonte moderna e arredondada */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transição suave */
 }
 
-.div-2, .div-4 {
-    color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+.div-3:hover {
+    color: #ffffff; /* Muda a cor do texto ao passar o mouse */
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8); /* Muda a sombra do texto ao passar o mouse */
+}
+
+.div-2 img, .div-4 img {
+    width: calc(15% - 20px); /* Largura para garantir que 6 imagens caibam em uma linha */
+    height: auto; /* Altura ajustada automaticamente */
+    margin: 10px; /* Espaçamento entre as imagens */
+    border-radius: 4px; /* Borda arredondada */
+    transition: transform 0.3s ease; /* Transição suave para a transformação */
+}
+
+.div-2 img, .div-4 img {
+    flex: 1 1 calc(15% - 10px); /* Cada imagem ocupa 1/6 do contêiner menos o espaço de margem */
+    max-width: calc(15% - 10px); /* Largura máxima de 1/6 do contêiner */
+    margin: 50 0 0 0;
+    border-radius: 4px;
+    transition: transform 0.5s ease; /* Transição suave para o efeito hover */
+}
+
+.div-2 img:hover, .div-4 img:hover {
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
 }
 
 .div-2 img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
 }
 
