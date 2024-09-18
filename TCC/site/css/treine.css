@@ -1,9 +1,26 @@
-.container {
-    max-width: 1200px; /* Defina a largura máxima que você deseja, por exemplo, 1200px */
+/* Reset básico para margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para o corpo e HTML */
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Limitar a largura do contêiner */
+  .container {
+    max-width: 1200px; /* Largura máxima desejada */
     margin: 0 auto; /* Centraliza o contêiner horizontalmente */
-    padding: 0 20px; /* Adiciona algum espaçamento lateral (opcional) */
-}
-
+    padding: 0 20px; /* Adiciona espaçamento lateral (opcional) */
+  }
+  
   /* Estilo para as seções de conteúdo */
   .content-section {
     display: flex;
@@ -68,3 +85,4 @@
     height: auto; /* Mantém a proporção das imagens */
     border-radius: 4px;
   }
+  
