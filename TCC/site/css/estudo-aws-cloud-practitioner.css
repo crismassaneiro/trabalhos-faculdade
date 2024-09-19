@@ -51,14 +51,21 @@
     gap: 15px;
   }
   
-  /* Estilo de cada item numerado */
   .item {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 5px;
-    font-family: 'Segoe UI', sans-serif;
-    color: #333;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    font-size: 18px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #4CAF50; /* Cor do botão */
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: left; /* Alinhar o texto à esquerda */
+    font-size: 16px;
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+  
+  .item:hover {
+    background-color: #45a049; /* Cor ao passar o mouse */
   }
   
