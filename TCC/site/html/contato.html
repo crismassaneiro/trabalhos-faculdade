@@ -22,7 +22,7 @@
 
     <div class="form-container">
       <h2>Entre em Contato</h2>
-      <form action="#" method="post" class="contact-form">
+      <form id="contact-form" class="contact-form">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
 
@@ -37,10 +37,12 @@
 
         <button type="submit" class="btn-enviar">Enviar</button>
       </form>
+      <p id="resultado-mensagem"></p> <!-- Área para exibir mensagens de resultado -->
     </div>
   </main>
 
   <footer-placeholder></footer-placeholder>
   <script src="../js/load-footer.js"></script>
+  <script src="../js/contato.js" defer></script> <!-- JavaScript para lidar com o envio do formulário -->
 </body>
 </html>
