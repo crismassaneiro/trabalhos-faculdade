@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const novaPerguntaBtn = document.getElementById("nova-pergunta");
     const anteriorPerguntaBtn = document.getElementById("anterior-pergunta");
     const resultadoTexto = document.getElementById("resultado");
+    const numeroPergunta = document.getElementById("numero-pergunta");
+    const temaPergunta = document.getElementById("tema-pergunta");
 
     let perguntasHistorico = [];
     let indicePerguntaAtual = -1;
@@ -30,6 +32,10 @@ document.addEventListener("DOMContentLoaded", function() {
         perguntaTexto.innerText = pergunta.Pergunta;
         opcoesContainer.innerHTML = ""; // Limpar opções anteriores
         resultadoTexto.style.visibility = "hidden"; // Esconder o resultado
+
+        // Exibir número da pergunta e tema
+        numeroPergunta.innerText = `Número da Pergunta: ${pergunta.PerguntaID}`;
+        temaPergunta.innerText = `Tema: ${pergunta.Tema}`;
 
         // Adicionar opções de resposta
         if (pergunta.Opcoes && Array.isArray(pergunta.Opcoes)) {

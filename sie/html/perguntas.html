@@ -16,6 +16,13 @@
 
     <main class="perguntas-container">
       <h1>AWS Cloud Practitioner</h1>
+
+      <!-- Container para exibir o número da pergunta e o tema -->
+      <div id="info-pergunta-container">
+          <span id="numero-pergunta">Número da Pergunta: 1</span>
+          <span id="tema-pergunta">Tema: Infra</span>
+      </div>
+
       <div id="pergunta-container">
           <p id="pergunta-texto">Carregando...</p>
           <div id="opcoes-container"></div>
@@ -26,11 +33,9 @@
           <button id="nova-pergunta">Próxima Pergunta</button>
       </div>
   </main>
-  
 
     <footer-placeholder></footer-placeholder>
     <script src="../js/load-footer.js"></script>
     <script src="../js/perguntas.js" defer></script> <!-- JavaScript para interagir com o endpoint -->
 </body>
-
 </html>

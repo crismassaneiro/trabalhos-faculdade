@@ -13,6 +13,32 @@ body {
     background-color: #f4f4f4; /* Fundo claro */
 }
 
+#info-pergunta-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#numero-pergunta, #tema-pergunta {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white; /* Fundo branco para contraste */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+}
+
+#numero-pergunta {
+    min-width: 150px; /* Largura mínima fixa para o número da pergunta */
+}
+
+#tema-pergunta {
+    min-width: 150px; /* Largura mínima fixa para o tema */
+    text-align: right;
+    color: #8605B8;
+}
+
 #pergunta-container {
     font-weight: bold;
     margin: 30px auto;
@@ -31,7 +57,7 @@ h1 {
     font-size: 32px;
     color: #8605B8; /* Cor do título */
     margin-bottom: 50px;
-    margin-top: 50px
+    margin-top: 50px;
 }
 
 button {
