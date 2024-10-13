@@ -1,0 +1,91 @@
+/* Garante que a página ocupe toda a altura da viewport */
+html, body {
+  height: 100%; /* Faz com que o corpo ocupe a altura total da tela */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o corpo ocupe a altura total da viewport */
+}
+
+main {
+  flex: 1; /* Faz o conteúdo principal expandir para ocupar o espaço restante */
+}
+
+/* Estilo para o rodapé */
+footer {
+  background-color: #8605B8; /* Cor de fundo roxa para o rodapé */
+  color: white; /* Cor do texto do rodapé */
+  padding: 20px; /* Espaçamento interno do rodapé */
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+  width: 100%; /* Garantir que o rodapé ocupe toda a largura da tela */
+  border-top: 2px solid #ffffff; /* Linha superior branca para separação */
+}
+
+.container {
+  max-width: 1200px; /* Largura máxima do contêiner */
+  margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+  padding: 0 20px; /* Espaçamento lateral do contêiner */
+  display: flex;
+  flex-direction: column; /* Exibe os itens verticalmente */
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente o logo */
+}
+
+.footer-logo-img {
+  max-width: 50px; /* Tamanho máximo do logo no rodapé */
+  height: auto; /* Manter a proporção da imagem */
+}
+
+.footer-nav {
+  margin-top: 10px; /* Espaçamento superior para separar do logo */
+  text-align: right; /* Alinhar o menu de navegação à direita */
+}
+
+.footer-nav ul {
+  list-style: none; /* Remover marcadores de lista */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Usar flexbox para alinhar os itens do menu */
+  justify-content: flex-end; /* Alinhar os itens à direita */
+}
+
+.footer-nav ul li {
+  margin: 0 15px; /* Espaçamento entre os itens do rodapé */
+}
+
+.footer-nav ul li a {
+  color: white; /* Cor dos links no rodapé */
+  text-decoration: none; /* Remover sublinhado dos links */
+  font-family: 'Segoe UI Rounded', 'Arial Rounded MT Bold', sans-serif; /* Fonte moderna e arredondada */
+  font-weight: bold; /* Negrito */
+}
+
+.footer-info {
+  margin-top: 20px; /* Espaçamento superior para separar dos links */
+  text-align: center; /* Centralizar o texto das informações adicionais */
+  font-size: 14px; /* Tamanho da fonte menor para as informações de copyright */
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 600px) {
+  footer {
+      flex-direction: column; /* Empilhar os itens do rodapé verticalmente */
+      text-align: center; /* Centralizar o conteúdo no rodapé em telas pequenas */
+  }
+
+  .footer-nav ul {
+      justify-content: center; /* Centralizar os links no rodapé em telas pequenas */
+      margin-top: 10px; /* Espaçamento superior para separar do logo */
+  }
+
+  .footer-nav ul li {
+      margin: 10px 0; /* Espaçamento entre os links em telas pequenas */
+  }
+}

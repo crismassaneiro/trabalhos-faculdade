@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../imgs/header/fiveicon.png" type="image/x-icon">
+  <title>Clouds - Perguntas</title>
+  <link rel="stylesheet" href="../css/perguntas.css"> <!-- Estilo da página de perguntas -->
+  <link rel="stylesheet" href="../css/footer.css"> <!-- Importação do CSS comum -->
+  <link rel="stylesheet" href="../css/estilo-comum.css"> <!-- Importação do CSS comum -->
+</head>
+
+<body>
+    <header-placeholder></header-placeholder>
+    <script src="../js/load-header.js"></script>
+
+    <main class="perguntas-container">
+      <h1>AWS Cloud Practitioner</h1>
+      <div id="pergunta-container">
+          <p id="pergunta-texto">Carregando...</p>
+          <div id="opcoes-container"></div>
+          <p id="resultado"></p> <!-- Área que vai indicar se a resposta está correta ou errada -->
+      </div>
+      <div id="botoes-navegacao">
+          <button id="anterior-pergunta">Pergunta Anterior</button>
+          <button id="nova-pergunta">Próxima Pergunta</button>
+      </div>
+  </main>
+  
+
+    <footer-placeholder></footer-placeholder>
+    <script src="../js/load-footer.js"></script>
+    <script src="../js/perguntas.js" defer></script> <!-- JavaScript para interagir com o endpoint -->
+</body>
+
+</html>

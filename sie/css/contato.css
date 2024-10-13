@@ -1,0 +1,80 @@
+/* CSS ajustado para o formulário */
+
+/* Estilo do contêiner principal */
+.contato-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  gap: 20px; /* Espaço entre a imagem e o formulário */
+}
+
+/* Estilo da imagem */
+.imagem-container img {
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Estilo do formulário */
+.form-container {
+  flex: 1;
+  max-width: 800px; /* Aumentando a largura do formulário */
+  background-color: #f9f9f9;
+  padding: 30px; /* Espaçamento interno maior */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #8605B8;
+  font-family: 'Segoe UI Rounded', sans-serif;
+  margin-bottom: 20px;
+}
+
+/* Estilo dos campos de entrada */
+.contact-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px; /* Aumentando o padding */
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Estilo do botão de enviar */
+.btn-enviar {
+  display: block;
+  background-color: #8605B8;
+  color: white;
+  padding: 14px 24px; /* Aumentando o tamanho do botão */
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  float: right;
+}
+
+.btn-enviar:hover {
+  background-color: #a229d1;
+}

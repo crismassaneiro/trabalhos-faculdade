@@ -1,0 +1,90 @@
+/* CSS para a página AWS Cloud Practitioner */
+
+/* Estilo do contêiner de título e imagem */
+.title-image-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  .title-image-container img {
+    max-width: 40%;
+    border-radius: 8px;
+  }
+  
+  .title-image-container h1 {
+    flex: 1;
+    font-size: 40px;
+    text-align: center;
+    color: #333;
+    font-family: 'Segoe UI Rounded', sans-serif;
+  }
+  
+  /* Estilo das divs com fundo roxo e bordas arredondadas */
+  .certification-info, .study-content, .simulation-info {
+    background-color: #8605B8;
+    padding: 20px;
+    color: white;
+    border-radius: 30px;
+    max-width: 900px; /* Limita a largura da div */
+    margin: 20px auto; /* Centraliza a div */
+    text-align: left;
+    font-family: 'Segoe UI Rounded', sans-serif;
+  }
+  
+  /* Estilo das divs com texto de parágrafo */
+  .certification-description, .simulation-description {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background-color: transparent; /* Remove fundo */
+    border-radius: 0; /* Remove arredondamento */
+  }
+  
+  /* Estilo da div 5: Botão Estudar */
+  .study-button {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .study-button button {
+    background-color: #8605B8;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .study-button button:hover {
+    background-color: #a229d1;
+  }
+  
+  /* Estilo da div 8: Botão Começar Simulado */
+  .simulation-button {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .simulation-button button {
+    background-color: #8605B8;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .simulation-button button:hover {
+    background-color: #a229d1;
+  }
+  

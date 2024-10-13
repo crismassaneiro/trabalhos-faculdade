@@ -1,0 +1,71 @@
+/* CSS para a página de Estudo AWS Cloud Practitioner */
+
+/* Estilo do contêiner de título e imagem */
+.title-image-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  .title-image-container img {
+    max-width: 40%;
+    border-radius: 8px;
+  }
+  
+  .title-image-container h1 {
+    flex: 1;
+    font-size: 40px;
+    text-align: center;
+    color: #333;
+    font-family: 'Segoe UI Rounded', sans-serif;
+  }
+  
+  /* Estilo da div "Sobre a certificação" */
+  .certification-info {
+    background-color: #8605B8;
+    padding: 20px;
+    color: white;
+    border-radius: 30px;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: left;
+    font-family: 'Segoe UI Rounded', sans-serif;
+  }
+  
+  /* Contêiner para as colunas */
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    gap: 20px;
+  }
+  
+  /* Estilo das colunas */
+  .left-column, .right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .item {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #4CAF50; /* Cor do botão */
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: left; /* Alinhar o texto à esquerda */
+    font-size: 16px;
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+  
+  .item:hover {
+    background-color: #45a049; /* Cor ao passar o mouse */
+  }
+  

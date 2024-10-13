@@ -1,0 +1,70 @@
+.container {
+    max-width: 1200px; /* Defina a largura máxima que você deseja, por exemplo, 1200px */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 0 20px; /* Adiciona algum espaçamento lateral (opcional) */
+}
+
+  /* Estilo para as seções de conteúdo */
+  .content-section {
+    display: flex;
+    flex-direction: column; /* Exibe as divs uma abaixo da outra */
+    gap: 20px; /* Espaçamento entre as divs */
+  }
+  
+  /* Estilo para div-1 */
+  .div-1 {
+    background-color: #8605B8;
+    padding: 20px;
+    text-align: left;
+    border-radius: 0 0 8px 8px;
+    color: white;
+    font-family: 'Segoe UI Rounded', 'Arial Rounded MT Bold', sans-serif;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .div-1:hover {
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Estilo para div-3 */
+  .div-3 {
+    background-color: #8605B8;
+    padding: 20px;
+    text-align: left;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Segoe UI Rounded', 'Arial Rounded MT Bold', sans-serif;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .div-3:hover {
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Estilo para as imagens */
+  .div-2 img, .div-4 img {
+    width: calc(15% - 20px); /* Largura para garantir que 6 imagens caibam em uma linha */
+    height: auto;
+    margin: 10px;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+  }
+  
+  .div-2 img:hover, .div-4 img:hover {
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+  }
+  
+  /* Estilo para a grade de imagens */
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a linha seguinte se necessário */
+    gap: 10px; /* Espaço entre as imagens */
+  }
+  
+  .image-grid img {
+    width: calc(15% - 10px); /* Ajusta a largura das imagens com base na quantidade */
+    height: auto; /* Mantém a proporção das imagens */
+    border-radius: 4px;
+  }

@@ -1,0 +1,141 @@
+/* Reset básico para margens e preenchimentos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+}
+
+/* Estilo para o corpo e HTML */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Limitar a largura do cabeçalho */
+.header-container {
+  max-width: 1200px; /* Defina a largura máxima do cabeçalho */
+  margin: 0 auto; /* Centraliza o contêiner do cabeçalho */
+  padding: 0 20px; /* Adiciona espaçamento lateral */
+  display: flex; /* Mantém o layout flex para o conteúdo */
+  justify-content: space-between; /* Espaçar os itens */
+  align-items: center; /* Centralizar verticalmente os itens */
+}
+
+/* Restante do estilo do cabeçalho (já existente) */
+header {
+  background-color: #ffffff; /* Cor de fundo do cabeçalho */
+  color: white; /* Cor do texto do cabeçalho */
+  width: 100%; /* O cabeçalho ocupará toda a largura da tela */
+  box-sizing: border-box; /* Incluir padding e border no cálculo da largura */
+  border-bottom: 4px solid #8605B8; /* Barrinha roxa na parte inferior do cabeçalho */
+  border-top: none; /* Nenhuma borda no topo do cabeçalho */
+  padding: 10px 0; /* Ajuste no padding para não atrapalhar o layout */
+}
+
+/* Estilo para o logo */
+.logo {
+  font-size: 24px; /* Tamanho da fonte do logo */
+  font-weight: bold; /* Negrito para o logo */
+  color: white; /* Cor do texto do logo */
+  text-decoration: none; /* Remover sublinhado do logo */
+}
+
+.logo img {
+  max-width: 100%; /* Garantir que a imagem não ultrapasse o contêiner */
+  height: auto; /* Manter a proporção da imagem */
+  max-height: 50px; /* Definir a altura máxima da imagem */
+}
+
+/* Estilo para o ícone */
+.five-icon {
+  margin-left: 20px; /* Aumentar o espaçamento entre o logo e o ícone */
+  max-width: 30px; /* Definir a largura máxima do ícone */
+  height: auto; /* Manter a proporção do ícone */
+}
+
+/* Estilo para o botão do menu móvel */
+.mobile-menu-button {
+  display: none; /* Ocultar o botão por padrão */
+  background-color: #8605B8; /* Cor de fundo do botão */
+  color: rgb(255, 255, 255); /* Cor do texto do botão */
+  border: none; /* Remover borda do botão */
+  padding: 10px; /* Espaçamento interno do botão */
+  font-size: 18px; /* Tamanho da fonte do botão */
+  cursor: pointer; /* Mostrar cursor de ponteiro ao passar sobre o botão */
+  border-radius: 5px; /* Cantos arredondados do botão */
+}
+
+/* Estilo para o menu de navegação */
+nav {
+  flex: 1; /* O menu ocupará o espaço disponível */
+  text-align: right; /* Alinhar o texto à direita */
+}
+
+nav ul {
+  list-style: none; /* Remover marcadores de lista */
+  margin: 0; /* Remover margens */
+  padding: 0; /* Remover espaçamento interno */
+  display: flex; /* Usar flexbox para alinhar os itens do menu */
+  justify-content: flex-end; /* Alinhar os itens à direita */
+}
+
+nav ul li {
+  margin: 0 10px; /* Espaçamento horizontal entre os itens do menu */
+}
+
+/* Estilo para o menu de navegação */
+nav ul li a {
+  color: #8605B8; /* Cor do texto dos links */
+  text-decoration: none; /* Remover sublinhado dos links */
+  padding: 5px 10px; /* Espaçamento interno dos links */
+  display: block; /* Tornar o link um bloco para facilitar o clique */
+  border-radius: 5px; /* Cantos arredondados dos links */
+  font-family: 'Segoe UI Rounded', 'Arial Rounded MT Bold', sans-serif; /* Fonte moderna e arredondada */
+  font-weight: bold; /* Estilo em negrito */
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Transição suave para cor e aumento */
+}
+
+/* Efeito hover */
+nav ul li a:hover {
+  color: #C586E0; /* Cor roxa mais fraca ao passar o mouse */
+
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho do texto */
+}
+
+/* Estilo para o link ativo */
+nav ul li a.active {
+  border-bottom: 2px solid #ff6600; /* Linha embaixo do link ativo */
+}
+
+
+/* Estilo para o link ativo */
+nav ul li a.active {
+  border-bottom: 2px solid #ff6600; /* Linha embaixo do link ativo */
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 600px) {
+  .mobile-menu-button {
+      display: block; /* Mostrar o botão do menu em telas pequenas */
+  }
+
+  nav ul {
+      display: none; /* Ocultar o menu de navegação em telas pequenas */
+      flex-direction: column; /* Empilhar os itens do menu verticalmente */
+      background-color: #8605B8; /* Cor de fundo do menu em telas pequenas */
+      text-align: center; /* Centralizar o texto dos itens do menu */
+      width: 100%; /* Garantir que o menu ocupe toda a largura disponível */
+      box-sizing: border-box; /* Incluir padding e border no cálculo da largura */
+  }
+
+  nav ul.show {
+      display: flex; /* Mostrar o menu quando a classe "show" estiver presente */
+  }
+
+  nav ul li {
+      margin: 10px 0; /* Espaçamento vertical entre os itens do menu */
+  }
+}

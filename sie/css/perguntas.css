@@ -1,0 +1,108 @@
+body {
+    font-family: 'Segoe UI Rounded', 'Arial Rounded MT Bold', sans-serif;
+    font-weight: bold;
+}
+
+.perguntas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4; /* Fundo claro */
+}
+
+#pergunta-container {
+    font-weight: bold;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 700px; /* Faz o container ocupar toda a largura disponível */
+    min-height: 150px; /* Altura mínima fixa para a área da pergunta */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 32px;
+    color: #8605B8; /* Cor do título */
+    margin-bottom: 50px;
+    margin-top: 50px
+}
+
+button {
+    margin: 25px 0;
+    padding: 10px 15px;
+    border: none;
+    background-color: #8605B8; /* Cor do botão */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8718b3; /* Cor do botão ao passar o mouse */
+}
+
+#opcoes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* Remove o gap entre as opções */
+    margin-bottom: 2px;
+}
+
+.opcao-btn {
+    display: block;
+    width: 100%;
+    padding: 5px; /* Reduz ainda mais o padding para aproximar as opções */
+    background-color: #f4f4f4; /* Fundo cinza das opções */
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    margin-bottom: 2px; /* Espaçamento mínimo entre as opções */
+}
+
+.opcao-btn:hover {
+    background-color: #e0e0e0; /* Efeito ao passar o mouse */
+}
+
+.resposta-correta {
+    background-color: #28a745 !important; /* Verde se correto */
+    color: white;
+}
+
+.resposta-incorreta {
+    background-color: #dc3545 !important; /* Vermelho se incorreto */
+    color: white;
+}
+
+#resultado {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    visibility: hidden; /* Inicialmente invisível */
+}
+
+#resultado.correto {
+    color: #28a745; /* Verde se a resposta estiver correta */
+}
+
+#resultado.errado {
+    color: #dc3545; /* Vermelho se a resposta estiver errada */
+}
+
+#botoes-navegacao {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#botoes-navegacao button {
+    width: 38%;
+}
