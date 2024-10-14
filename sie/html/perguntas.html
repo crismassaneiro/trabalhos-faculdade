@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../imgs/header/fiveicon.png" type="image/x-icon">
-  <title>Clouds - Perguntas</title>
-  <link rel="stylesheet" href="../css/perguntas.css"> <!-- Estilo da página de perguntas -->
-  <link rel="stylesheet" href="../css/footer.css"> <!-- Importação do CSS comum -->
-  <link rel="stylesheet" href="../css/estilo-comum.css"> <!-- Importação do CSS comum -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imgs/header/fiveicon.png" type="image/x-icon">
+    <title>Clouds - Perguntas</title>
+    <link rel="stylesheet" href="../css/perguntas.css"> <!-- Estilo da página de perguntas -->
+    <link rel="stylesheet" href="../css/footer.css"> <!-- Importação do CSS comum -->
+    <link rel="stylesheet" href="../css/estilo-comum.css"> <!-- Importação do CSS comum -->
 </head>
 
 <body>
@@ -15,27 +15,73 @@
     <script src="../js/load-header.js"></script>
 
     <main class="perguntas-container">
-      <h1>AWS Cloud Practitioner</h1>
+        <h1>AWS Cloud Practitioner</h1>
 
-      <!-- Container para exibir o número da pergunta e o tema -->
-      <div id="info-pergunta-container">
-          <span id="numero-pergunta">Número da Pergunta: 1</span>
-          <span id="tema-pergunta">Tema: Infra</span>
-      </div>
+        <!-- Container para exibir o número da pergunta e o tema -->
+        <div id="info-pergunta-container">
+            <span id="numero-pergunta">Número da Pergunta: 1</span>
+            <span id="tema-pergunta">Tema: Infra</span>
+        </div>
 
-      <div id="pergunta-container">
-          <p id="pergunta-texto">Carregando...</p>
-          <div id="opcoes-container"></div>
-          <p id="resultado"></p> <!-- Área que vai indicar se a resposta está correta ou errada -->
-      </div>
-      <div id="botoes-navegacao">
-          <button id="anterior-pergunta">Pergunta Anterior</button>
-          <button id="nova-pergunta">Próxima Pergunta</button>
-      </div>
-  </main>
+        <div id="pergunta-container">
+            <p id="pergunta-texto">Carregando...</p>
+            <div id="opcoes-container"></div>
+            <p id="resultado"></p> <!-- Área que vai indicar se a resposta está correta ou errada -->
+        </div>
+
+        <!-- Placar de acertos e erros -->
+        <div id="placar">
+            <span id="acertos">Acertos: 0</span>
+            <span id="erros">Erros: 0</span>
+        </div>
+
+        <!-- Botões de navegação -->
+        <div id="botoes-navegacao">
+            <button id="anterior-pergunta">Pergunta Anterior</button>
+            <button id="nova-pergunta">Próxima Pergunta</button>
+        </div>
+        
+        <!-- Formulário de Feedback -->
+        <div id="feedback-form" style="display: none;">
+            <h2>Feedback</h2>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span>Conte-nos sua opinião:</span>
+                <button id="fechar-feedback">Fechar</button>
+            </div>
+            
+            <label for="plataforma-rating">O que você achou da plataforma?</label>
+            <select id="plataforma-rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="perguntas-rating">O que você achou das perguntas?</label>
+            <select id="perguntas-rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="aprendizado-rating">Você aprendeu algo novo?</label>
+            <select id="aprendizado-rating">
+                <option value="1">Sim</option>
+                <option value="2">Não</option>
+            </select>
+
+            <label for="feedback-text">Deixe sua opinião:</label>
+            <textarea id="feedback-text" rows="5"></textarea>
+
+            <button id="enviar-feedback">Enviar Feedback</button>
+        </div>
+    </main>
 
     <footer-placeholder></footer-placeholder>
     <script src="../js/load-footer.js"></script>
-    <script src="../js/perguntas.js" defer></script> <!-- JavaScript para interagir com o endpoint -->
+    <script src="../js/perguntas.js"></script> <!-- Código JS específico para a página de perguntas -->
 </body>
 </html>

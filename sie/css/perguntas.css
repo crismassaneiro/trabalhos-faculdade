@@ -39,6 +39,15 @@ body {
     color: #8605B8;
 }
 
+#placar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 #pergunta-container {
     font-weight: bold;
     margin: 30px auto;
@@ -131,4 +140,58 @@ button:hover {
 
 #botoes-navegacao button {
     width: 38%;
+}
+
+#feedback-form {
+    margin-top: 20px; /* Espaçamento entre o formulário de feedback e as perguntas */
+    padding: 20px; /* Espaçamento interno do formulário */
+    background-color: #f4f4f4; /* Fundo claro para o formulário */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+    display: flex; /* Usar flexbox para organização */
+    flex-direction: column; /* Colocar os elementos em coluna */
+    width: 100%; /* Largura total do formulário */
+    max-width: 700px; /* Largura máxima para o formulário */
+    margin: 20px auto; /* Centraliza o formulário horizontalmente */
+}
+
+#feedback-form h2 {
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #8605B8; /* Cor do título */
+}
+
+#feedback-form label {
+    margin: 10px 0 5px; /* Margem para os rótulos */
+    font-weight: bold; /* Destacar rótulos */
+}
+
+#feedback-form select,
+#feedback-form textarea {
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-bottom: 15px; /* Espaço abaixo dos campos */
+    width: 100%; /* Largura total do formulário */
+}
+
+#feedback-form button {
+    margin-top: 10px; /* Espaço acima do botão */
+    background-color: #8605B8; /* Cor do botão */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mão ao passar o mouse */
+    padding: 10px 15px; /* Espaçamento interno */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+#feedback-form button:hover {
+    background-color: #8718b3; /* Cor do botão ao passar o mouse */
+}
+
+#fechar-feedback {
+    background-color: red; /* Fundo vermelho */
+    color: white; /* Texto branco */
+    float: right; /* Botão à direita */
+    margin-bottom: 15px; /* Espaçamento abaixo do botão fechar */
 }
