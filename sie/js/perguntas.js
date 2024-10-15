@@ -59,26 +59,26 @@ document.addEventListener("DOMContentLoaded", function() {
                 const botaoOpcao = document.createElement("button");
                 botaoOpcao.innerText = opcao;
                 botaoOpcao.classList.add('opcao-btn');
-                botaoOpcao.onclick = () => verificarResposta(botaoOpcao, opcao, pergunta.RespostaCorreta);
+                botaoOpcao.onclick = () => verificarResposta(botaoOpcao, opcao, pergunta.RespostaCorreta, pergunta.JustificativaCorreta, pergunta.JustificativaIncorreta);
                 opcoesContainer.appendChild(botaoOpcao);
             });
         }
     }
 
     // Função para verificar a resposta do usuário
-    function verificarResposta(botao, resposta, respostaCorreta) {
+    function verificarResposta(botao, resposta, respostaCorreta, justificativaCorreta, justificativaIncorreta) {
         if (respostaDada) return; // Se já foi dada uma resposta, não faz nada
 
         respostaDada = true; // Marca que a resposta foi dada
 
         // Verifica se a resposta está correta
         if (resposta === respostaCorreta) {
-            resultadoTexto.innerText = `Correto! A resposta é: ${resposta}`;
+            resultadoTexto.innerText = `Correto! A resposta é: ${resposta}. ${justificativaCorreta}`;
             resultadoTexto.className = "correto";
             botao.classList.add("resposta-correta");
             acertos++; // Incrementar acertos
         } else {
-            resultadoTexto.innerText = `Incorreto! A resposta correta é: ${respostaCorreta}`;
+            resultadoTexto.innerText = `Incorreto! A resposta correta é: ${respostaCorreta}. ${justificativaIncorreta}`;
             resultadoTexto.className = "errado";
             botao.classList.add("resposta-incorreta");
             erros++; // Incrementar erros
