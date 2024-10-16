@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const perguntaTexto = document.getElementById("pergunta-texto");
     const opcoesContainer = document.getElementById("opcoes-container");
     const novaPerguntaBtn = document.getElementById("nova-pergunta");
@@ -11,6 +11,24 @@ document.addEventListener("DOMContentLoaded", function() {
     const fecharFeedbackBtn = document.getElementById("fechar-feedback");
     const acertosTexto = document.getElementById("acertos");
     const errosTexto = document.getElementById("erros");
+    const feedbackComentario = document.getElementById("feedback-text");
+    const plataformaRating = document.getElementById("plataforma-rating");
+    const perguntasRating = document.getElementById("perguntas-rating");
+    const aprendizadoRating = document.getElementById("aprendizado-rating");
+
+    // Criação do elemento de erro
+    const mensagemErro = document.createElement("div");
+    mensagemErro.id = "mensagem-erro";
+    mensagemErro.style.color = "red"; // Cor do texto de erro
+    mensagemErro.style.visibility = "hidden"; // Inicialmente invisível
+    feedbackForm.appendChild(mensagemErro); // Adiciona a mensagem de erro abaixo do formulário
+
+    // Criação do elemento de sucesso
+    const mensagemSucesso = document.createElement("div");
+    mensagemSucesso.id = "mensagem-sucesso";
+    mensagemSucesso.style.color = "green"; // Cor do texto de sucesso
+    mensagemSucesso.style.visibility = "hidden"; // Inicialmente invisível
+    feedbackForm.appendChild(mensagemSucesso); // Adiciona a mensagem de sucesso abaixo do formulário
 
     let perguntasHistorico = [];
     let indicePerguntaAtual = -1;
@@ -38,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         } catch (error) {
             console.error(error);
-            perguntaTexto.innerText = "Não foi possível carregar a pergunta.";
+            mostrarMensagemErro("Não foi possível carregar a pergunta.");
         }
     }
 
@@ -103,22 +121,104 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Eventos para os botões
+    // Função para mostrar mensagens de erro
+    function mostrarMensagemErro(mensagem) {
+        mensagemErro.innerText = mensagem;
+        mensagemErro.style.visibility = "visible"; // Exibe a mensagem de erro
+        mensagemSucesso.style.visibility = "hidden"; // Esconde mensagem de sucesso anterior
+        setTimeout(() => {
+            mensagemErro.style.visibility = "hidden"; // Esconde a mensagem de erro após 5 segundos
+        }, 5000);
+    }
+
+    // Função para enviar feedback via API Gateway
+    async function enviarFeedback() {
+        const comentario = feedbackComentario.value;
+        const satisfacao = plataformaRating.value;
+        const perguntaID = perguntasHistorico[indicePerguntaAtual].PerguntaID; // Pega o ID da pergunta atual
+
+        // Limpa mensagens de erro e sucesso anteriores
+        mensagemErro.style.visibility = "hidden";
+        mensagemSucesso.style.visibility = "hidden"; // Limpa mensagem de sucesso anterior
+
+        if (!comentario || !satisfacao) {
+            mostrarMensagemErro("Por favor, preencha todos os campos.");
+            return;
+        }
+
+        const feedbackData = {
+            pergunta_id: perguntaID,
+            comentario: comentario,
+            satisfacao: satisfacao
+        };
+
+        try {
+            const response = await fetch("https://7rks1opxcl.execute-api.us-east-1.amazonaws.com/dev/feedback", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(feedbackData)
+            });
+
+            if (!response.ok) {
+                throw new Error("Erro ao enviar o feedback.");
+            }
+
+            mensagemSucesso.innerText = "Feedback enviado com sucesso!";
+            mensagemSucesso.style.visibility = "visible"; // Exibe a mensagem de sucesso
+            feedbackForm.style.display = "none"; // Esconde o formulário após o envio
+            feedbackComentario.value = ''; // Limpa o campo de comentário
+            plataformaRating.innerHTML = '<option value="" disabled selected>Selecione uma opção</option>'; // Reseta o campo de satisfação
+        } catch (error) {
+            console.error(error);
+            mostrarMensagemErro("Erro ao enviar o feedback. Tente novamente.");
+        }
+    }
+
+    // Preencher opções ao clicar nos campos de seleção
+    function preencherOpcoes(selectElement, opcoes) {
+        selectElement.innerHTML = ''; // Limpa qualquer opção existente
+        const defaultOption = document.createElement('option');
+        defaultOption.value = "";
+        defaultOption.disabled = true;
+        defaultOption.selected = true;
+        defaultOption.textContent = "Selecione uma opção";
+        selectElement.appendChild(defaultOption);
+
+        opcoes.forEach(opcao => {
+            const optionElement = document.createElement('option');
+            optionElement.value = opcao.toLowerCase(); // Exemplo: "ruim", "médio", etc.
+            optionElement.textContent = opcao;
+            selectElement.appendChild(optionElement);
+        });
+    }
+
+    // Eventos de foco para carregar as opções quando o usuário clicar nos campos de seleção
+    plataformaRating.addEventListener("focus", function () {
+        preencherOpcoes(plataformaRating, ["Ruim", "Médio", "Bom", "Ótimo"]);
+    });
+
+    perguntasRating.addEventListener("focus", function () {
+        preencherOpcoes(perguntasRating, ["Ruim", "Médio", "Bom", "Ótimo"]);
+    });
+
+    aprendizadoRating.addEventListener("focus", function () {
+        preencherOpcoes(aprendizadoRating, ["Sim", "Não"]);
+    });
+
+    // Adicionando eventos aos botões
     novaPerguntaBtn.addEventListener("click", obterPergunta);
     anteriorPerguntaBtn.addEventListener("click", carregarPerguntaAnterior);
-    
-    // Evento para o botão de fechar feedback
+    enviarFeedbackBtn.addEventListener("click", enviarFeedback);
     fecharFeedbackBtn.addEventListener("click", () => {
-        feedbackForm.style.display = "none"; // Fechar o formulário
+        feedbackForm.style.display = "none"; // Esconde o formulário
+        feedbackComentario.value = ''; // Limpa o campo de comentário
+        plataformaRating.innerHTML = '<option value="" disabled selected>Selecione uma opção</option>'; // Reseta o campo de satisfação
+        mensagemErro.style.visibility = "hidden"; // Esconde mensagens de erro
+        mensagemSucesso.style.visibility = "hidden"; // Esconde mensagens de sucesso
     });
 
-    // Evento para o botão de enviar feedback
-    enviarFeedbackBtn.addEventListener("click", () => {
-        // Lógica para enviar feedback (pode ser implementada conforme necessário)
-        alert("Feedback enviado!"); // Exemplo de notificação
-        feedbackForm.style.display = "none"; // Fechar o formulário após enviar
-    });
-
-    // Carregar a primeira pergunta ao iniciar a página
+    // Inicializa com a primeira pergunta
     obterPergunta();
 });
