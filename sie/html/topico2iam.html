@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../imgs/header/fiveicon.png" type="image/x-icon"> <!-- Favicon --> 
+  <title>Clouds - IAM da AWS</title>
+  <link rel="stylesheet" href="../css/sobre.css"> <!-- Estilo da página -->
+  <link rel="stylesheet" href="../css/footer.css"> <!-- Importação do CSS comum -->
+  <link rel="stylesheet" href="../css/estilo-comum.css"> <!-- Importação do CSS comum -->
+  <link rel="stylesheet" href="../css/topico2iam.css"> <!-- Importação do CSS do IAM -->
+</head>
+
+<body>
+    <header-placeholder></header-placeholder> <!-- Espaço reservado para o cabeçalho -->
+    <script src="../js/load-header.js"></script> <!-- JS para carregar o cabeçalho -->
+  
+    <main class="sobre-container">
+      <div class="imagem-container">
+        <img src="../imgs/topicos/iam.png" alt="IAM da AWS">
+      </div>
+  
+      <div class="texto-container">
+        <h2>O que é o AWS IAM?</h2>
+        <p>
+          O AWS Identity and Access Management (IAM) é um serviço da Amazon Web Services que 
+          permite gerenciar o acesso a recursos da AWS de maneira segura. Com o IAM, você pode 
+          criar e gerenciar usuários e grupos de usuários, além de definir permissões para permitir 
+          ou negar o acesso a recursos da AWS.
+        </p>
+
+        <h2>Funcionalidades Principais</h2>
+        <ul>
+          <li><strong>Gerenciamento de Usuários:</strong> Criação e gerenciamento de contas de usuários na AWS.</li>
+          <li><strong>Grupos:</strong> Organização de usuários em grupos para facilitar a atribuição de permissões.</li>
+          <li><strong>Políticas de Acesso:</strong> Definição de permissões detalhadas através de políticas de acesso.</li>
+          <li><strong>Autenticação Multifator (MFA):</strong> Adição de uma camada extra de segurança aos usuários.</li>
+          <li><strong>Federation:</strong> Permite que usuários de fora da AWS acessem recursos sem a necessidade de criar uma conta IAM.</li>
+          <li><strong>Roles:</strong> Criação de funções que podem ser assumidas por usuários ou serviços, permitindo um acesso temporário e controlado.</li>
+        </ul>
+
+        <div class="sub-section">
+          <h2>Práticas Recomendadas</h2>
+          <p>
+            Para garantir a segurança da sua conta AWS, siga estas práticas recomendadas ao usar o IAM:
+          </p>
+          <ol>
+            <li>Use sempre a autenticação multifator para aumentar a segurança.</li>
+            <li>Crie usuários individuais em vez de compartilhar credenciais.</li>
+            <li>Aplique o princípio do menor privilégio, concedendo apenas as permissões necessárias.</li>
+            <li>Revise e ajuste as permissões regularmente.</li>
+            <li>Utilize roles para serviços e aplicações que precisam acessar recursos da AWS.</li>
+          </ol>
+        </div>
+
+        <div class="sub-section">
+          <h2>Integração com Outros Serviços</h2>
+          <p>
+            O IAM se integra com diversos serviços da AWS, permitindo um gerenciamento seguro e centralizado do acesso. Por exemplo:
+          </p>
+          <ul>
+            <li><strong>AWS S3:</strong> Controle de acesso a buckets e objetos.</li>
+            <li><strong>AWS EC2:</strong> Gerenciamento de acesso a instâncias e recursos.</li>
+            <li><strong>AWS Lambda:</strong> Controle de execução de funções e permissões de acesso a outros serviços.</li>
+          </ul>
+        </div>
+
+        <div class="sub-section">
+          <h2>Casos de Uso</h2>
+          <p>
+            O AWS IAM é usado em diversos cenários, incluindo:
+          </p>
+          <ul>
+            <li>Gerenciamento de acesso de equipes de desenvolvimento em uma aplicação baseada em nuvem.</li>
+            <li>Segurança de dados em aplicações que utilizam serviços da AWS, como S3 e DynamoDB.</li>
+            <li>Implementação de soluções de autenticação para usuários externos através de Federation.</li>
+          </ul>
+        </div>
+
+        <div class="sub-section">
+          <h2>Auditoria e Monitoramento</h2>
+          <p>
+            O IAM permite a auditoria e monitoramento das atividades dos usuários através do AWS CloudTrail. Isso inclui:
+          </p>
+          <ul>
+            <li>Registro de todas as chamadas de API relacionadas ao IAM.</li>
+            <li>Monitoramento de alterações nas permissões e políticas.</li>
+            <li>Alertas para atividades suspeitas ou não autorizadas.</li>
+          </ul>
+        </div>
+
+        <h2>Considerações Finais</h2>
+        <p>
+          O AWS IAM é uma ferramenta poderosa para gerenciar acessos e proteger sua infraestrutura na 
+          nuvem. Com ele, você pode controlar de forma granular quem pode acessar seus recursos, 
+          garantindo que sua conta AWS permaneça segura e organizada.
+        </p>
+      </div>
+    </main>
+  
+    <footer-placeholder></footer-placeholder>
+    <script src="../js/load-footer.js"></script>
+</body>
+</html>

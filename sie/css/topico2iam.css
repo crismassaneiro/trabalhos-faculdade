@@ -1,0 +1,51 @@
+body {
+    font-family: 'Segoe UI Rounded', 'Arial Rounded MT Bold', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .sobre-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imagem-container img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .texto-container {
+    max-width: 600px;
+    padding-left: 20px;
+  }
+  
+  .texto-container h2 {
+    font-size: 28px;
+    color: #8605B8;
+    margin-bottom: 20px;
+  }
+  
+  .texto-container p, .texto-container ul, .texto-container ol {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .texto-container ul, .texto-container ol {
+    margin-left: 20px;
+  }
+  
+  .sub-section {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+  }
+  
