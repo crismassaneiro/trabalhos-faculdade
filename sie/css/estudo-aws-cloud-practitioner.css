@@ -30,8 +30,9 @@
     border-radius: 30px;
     max-width: 900px;
     margin: 20px auto;
-    text-align: left;
+    text-align: center;
     font-family: 'Segoe UI Rounded', sans-serif;
+    font-weight: bold;
   }
   
   /* Contêiner para as colunas */
@@ -63,6 +64,7 @@
     text-align: left; /* Alinhar o texto à esquerda */
     font-size: 16px;
     border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold;
   }
   
   .item:hover {

@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
             contagemPerguntas++;
 
             // Verificar se deve exibir o formulário de feedback
-            if (contagemPerguntas % 15 === 0) {
+            if (contagemPerguntas % 1 === 0) {
                 feedbackForm.style.display = "block"; // Mostrar o formulário
             }
         } catch (error) {
