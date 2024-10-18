@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imgs/header/fiveicon.png" type="image/x-icon"> <!-- Favicon -->
+    <title>Clouds - Amazon EC2 Instance Storage</title>
+    <link rel="stylesheet" href="../css/sobre.css"> <!-- Estilo da página -->
+    <link rel="stylesheet" href="../css/footer.css"> <!-- Importação do CSS do footer -->
+    <link rel="stylesheet" href="../css/estilo-comum.css"> <!-- Importação do CSS comum -->
+</head>
+
+<body>
+    <header-placeholder></header-placeholder> <!-- Espaço reservado para o cabeçalho -->
+    <script src="../js/load-header.js"></script> <!-- JS para carregar o cabeçalho -->
+
+    <main class="sobre-container">
+        <div class="imagem-container">
+            <img src="../imgs/topicos/ec2-storage.png" alt="Amazon EC2 Instance Storage">
+        </div>
+
+        <div class="texto-container">
+            <h2>O que é o Amazon EC2 Instance Storage?</h2>
+            <p>
+                O Amazon EC2 Instance Storage fornece armazenamento temporário para instâncias do Amazon Elastic Compute Cloud (EC2). Este armazenamento é ideal para dados que mudam com frequência, como arquivos temporários, caches ou dados que não precisam ser persistidos após a parada da instância.
+            </p>
+
+            <h2>Tipos de Armazenamento</h2>
+            <p>
+                Existem diferentes tipos de armazenamento disponíveis para instâncias EC2:
+            </p>
+            <ul>
+                <li><strong>Amazon EBS (Elastic Block Store):</strong> O armazenamento mais simples e flexível para EC2. Cada instância EC2 pode ter vários volumes EBS, restritos por zonas de disponibilidade (A-Z). Você pode usar snapshots para salvar seus EBS e transferi-los entre diferentes zonas de disponibilidade.</li>
+                <li><strong>Amazon EFS (Elastic File System):</strong> Um sistema de arquivos que pode ser compartilhado entre centenas de instâncias EC2, permitindo acesso simultâneo. Ao contrário do EBS, que é restrito a uma única instância, o EFS permite a colaboração entre várias instâncias EC2.</li>
+                <li><strong>Amazon FSx:</strong> Existem versões específicas para ambientes Windows e Linux, como o FSx for Windows File Server e FSx for Lustre, ambos projetados para atender a requisitos específicos de armazenamento de arquivos.</li>
+            </ul>
+
+            <div class="sub-section">
+                <h2>Amazon EC2 Instance Store</h2>
+                <p>
+                    O Instance Store é uma opção de armazenamento de alta performance para instâncias EC2. Ele fornece um armazenamento temporário que está diretamente vinculado ao hardware da instância. Contudo, os dados são perdidos se a instância EC2 que o armazena for parada ou excluída.
+                </p>
+            </div>
+
+            <div class="sub-section">
+                <h2>Amazon EFS e EFS-IA</h2>
+                <p>
+                    O EFS-IA (Infrequent Access) é uma versão econômica do EFS. Caso um arquivo não seja acessado por um determinado período, você pode criar uma política que transfira esses dados para o modo IA, gerando uma economia de até 92% nos custos de armazenamento.
+                </p>
+            </div>
+
+            <div class="sub-section">
+                <h2>Amazon AMI</h2>
+                <p>
+                    Uma Amazon Machine Image (AMI) é uma cópia de uma instância EC2. Ao configurar uma instância, você pode salvar essa configuração em uma AMI para lançá-la quantas vezes precisar, apenas trocando o nome da AMI.
+                </p>
+            </div>
+
+            <h2>Vantagens do Instance Storage</h2>
+            <p>
+                O uso do Instance Storage oferece várias vantagens:
+            </p>
+            <ul>
+                <li><strong>Alta Performance:</strong> O armazenamento é diretamente ligado ao hardware da instância, proporcionando alta taxa de transferência e baixa latência.</li>
+                <li><strong>Custo Efetivo:</strong> Para cargas de trabalho temporárias, o Instance Store pode ser mais econômico do que o EBS.</li>
+                <li><strong>Ideal para Dados Temporários:</strong> Perfeito para armazenamento de dados temporários, como arquivos de processamento ou buffers de cache.</li>
+            </ul>
+
+            <h2>Considerações Importantes</h2>
+            <p>
+                Apesar de suas vantagens, existem algumas considerações ao usar o Instance Storage:
+            </p>
+            <ol>
+                <li>Os dados são perdidos ao parar ou terminar a instância.</li>
+                <li>O Instance Store não pode ser redimensionado após a criação da instância.</li>
+                <li>A escolha de instâncias com armazenamento em instância deve ser feita com base nos requisitos de persistência dos dados.</li>
+            </ol>
+
+            <h2>Casos de Uso</h2>
+            <p>
+                O Amazon EC2 Instance Storage é ideal para:
+            </p>
+            <ul>
+                <li>Aplicações temporárias que não exigem persistência de dados.</li>
+                <li>Processamento de dados em larga escala, como processamento de vídeos ou big data.</li>
+                <li>Caches de aplicação e armazenamento temporário para dados intermediários.</li>
+            </ul>
+
+            <h2>Considerações Finais</h2>
+            <p>
+                O Amazon EC2 Instance Storage é uma solução eficaz para cenários que requerem armazenamento de dados temporários de alta performance. Entender suas características e limitações é fundamental para a correta implementação em suas aplicações.
+            </p>
+        </div>
+    </main>
+
+    <footer-placeholder></footer-placeholder>
+    <script src="../js/load-footer.js"></script>
+</body>
+</html>
