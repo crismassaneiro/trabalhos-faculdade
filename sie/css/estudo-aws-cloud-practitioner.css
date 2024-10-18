@@ -57,7 +57,7 @@
     width: 100%;
     padding: 10px;
     margin: 5px 0;
-    background-color: #4CAF50; /* Cor do botão */
+    background-color: #8605B8; /* Cor do botão */
     color: white;
     border: none;
     cursor: pointer;
@@ -68,6 +68,6 @@
   }
   
   .item:hover {
-    background-color: #45a049; /* Cor ao passar o mouse */
+    background-color: #c275e0; /* Cor ao passar o mouse */
   }
   
