@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imgs/header/fiveicon.png" type="image/x-icon"> <!-- Favicon -->
+    <title>Clouds - ELB & ASG</title>
+    <link rel="stylesheet" href="../css/topico6elbeasg.css"> <!-- Estilo da página -->
+    <link rel="stylesheet" href="../css/footer.css"> <!-- Importação do CSS do footer -->
+    <link rel="stylesheet" href="../css/estilo-comum.css"> <!-- Importação do CSS comum -->
+</head>
+
+<body>
+    <header-placeholder></header-placeholder> <!-- Espaço reservado para o cabeçalho -->
+    <script src="../js/load-header.js"></script> <!-- JS para carregar o cabeçalho -->
+
+    <main class="sobre-container">
+        <div class="imagem-container">
+            <img src="../imgs/topicos/elb-asg-overview.png" alt="ELB & ASG">
+        </div>
+
+        <div class="texto-container">
+            <h2>Elastic Load Balancing (ELB)</h2>
+            <p>
+                O Elastic Load Balancing (ELB) é um serviço que distribui automaticamente o tráfego de entrada entre várias instâncias do Amazon EC2. Ele garante alta disponibilidade e escalabilidade para suas aplicações, equilibrando a carga de forma eficiente.
+            </p>
+
+            <h2>Características dos Balanceadores de Carga Elásticos</h2>
+            <ul>
+                <li>Distribuição do tráfego entre instâncias EC2 no backend.</li>
+                <li>Suporte a múltiplas zonas de disponibilidade (Multi-AZ) para garantir alta disponibilidade.</li>
+                <li>Realiza verificações de integridade das instâncias para garantir que apenas instâncias saudáveis recebam tráfego.</li>
+            </ul>
+
+            <h2>Tipos de Load Balancers</h2>
+            <p>
+                A AWS oferece quatro tipos principais de load balancers:
+            </p>
+            <ul>
+                <li><strong>Load Balancer Clássico:</strong> O tipo mais antigo, funciona nos níveis de transporte e aplicação, mas está sendo gradualmente substituído por outras opções.</li>
+                <li><strong>Application Load Balancer (ALB):</strong> Ideal para aplicações baseadas em HTTP e HTTPS, operando no nível 7 (L7) do modelo OSI, permitindo a análise de conteúdo.</li>
+                <li><strong>Network Load Balancer (NLB):</strong> Para aplicações que exigem baixa latência e alta taxa de transferência, opera no nível 4 (L4) do modelo OSI.</li>
+                <li><strong>Gateway Load Balancer (GWLB):</strong> Facilita a implementação de soluções de segurança, como firewalls e proxies, integrando-se com outros serviços.</li>
+            </ul>
+
+            <div class="sub-section">
+                <h2>Auto Scaling Groups (ASG)</h2>
+                <p>
+                    Os Grupos de Auto Scaling (ASG) são responsáveis por implementar a elasticidade para suas aplicações, escalando automaticamente as instâncias do EC2 com base na demanda.
+                </p>
+                <ul>
+                    <li>Dimensionam as instâncias EC2 conforme necessário, aumentando ou diminuindo o número de instâncias em resposta ao tráfego.</li>
+                    <li>Substituem instâncias não saudáveis automaticamente, garantindo que o serviço permaneça disponível.</li>
+                    <li>Estão integrados com o ELB, permitindo um gerenciamento eficiente da carga de trabalho.</li>
+                </ul>
+            </div>
+
+            <div class="sub-section">
+                <h2>Alta Disponibilidade vs Escalabilidade</h2>
+                <p>
+                    A arquitetura da nuvem permite que você configure suas aplicações para serem altamente disponíveis e escaláveis. A escalabilidade pode ser vertical (aumento da capacidade de uma única instância) ou horizontal (adicionar mais instâncias).
+                </p>
+                <p>
+                    A elasticidade se refere à capacidade de aumentar ou diminuir a quantidade de recursos computacionais automaticamente, enquanto a agilidade na nuvem permite que as empresas respondam rapidamente às mudanças de demanda.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer-placeholder></footer-placeholder>
+    <script src="../js/load-footer.js"></script>
+</body>
+</html>
