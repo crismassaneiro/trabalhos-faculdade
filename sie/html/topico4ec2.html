@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imgs/header/fiveicon.png" type="image/x-icon"> <!-- Favicon -->
+    <title>Clouds - Amazon EC2</title>
+    <link rel="stylesheet" href="../css/topico4ec2.css"> <!-- Estilo da página -->
+    <link rel="stylesheet" href="../css/footer.css"> <!-- Importação do CSS do footer -->
+    <link rel="stylesheet" href="../css/estilo-comum.css"> <!-- Importação do CSS comum -->
+</head>
+
+<body>
+    <header-placeholder></header-placeholder> <!-- Espaço reservado para o cabeçalho -->
+    <script src="../js/load-header.js"></script> <!-- JS para carregar o cabeçalho -->
+
+    <main class="sobre-container">
+        <div class="imagem-container">
+            <img src="../imgs/topicos/awsec2.png" alt="Amazon EC2">
+        </div>
+
+        <div class="texto-container">
+            <h2>O que é o Amazon EC2?</h2>
+            <p>
+                O Amazon Elastic Compute Cloud (EC2) é um serviço web que fornece capacidade computacional escalável na nuvem. Ele permite que os usuários executem instâncias em uma variedade de sistemas operacionais, oferecendo flexibilidade, escalabilidade e um modelo de pagamento por uso.
+            </p>
+
+            <h2>Opções de Sistema Operacional</h2>
+            <p>
+                Uma instância EC2 pode ser executada em diferentes sistemas operacionais:
+            </p>
+            <ul>
+                <li><strong>Linux:</strong> Suporta várias distribuições, incluindo Ubuntu, Amazon Linux, Red Hat e CentOS.</li>
+                <li><strong>Mac OS:</strong> Para desenvolvedores que precisam de um ambiente macOS na nuvem.</li>
+                <li><strong>Windows:</strong> Ideal para aplicações baseadas em Windows e integração com serviços Microsoft.</li>
+            </ul>
+
+            <div class="sub-section">
+                <h2>Escolha de Hardware</h2>
+                <p>
+                    A Amazon EC2 permite que você escolha a configuração de hardware que melhor atende às suas necessidades. Você pode selecionar o tipo de instância com base em fatores como CPU, memória, armazenamento e capacidade de rede. Isso garante que você tenha a infraestrutura ideal para suas aplicações.
+                </p>
+            </div>
+
+            <div class="sub-section">
+                <h2>Grupos de Segurança</h2>
+                <p>
+                    Os grupos de segurança atuam como firewalls virtuais para suas instâncias EC2. Eles controlam o tráfego de entrada e saída, permitindo que você defina regras específicas para gerenciar o acesso às suas instâncias. É crucial configurar corretamente os grupos de segurança para proteger suas aplicações na nuvem.
+                </p>
+                <p>
+                    <strong>Principais Funções dos Grupos de Segurança:</strong>
+                </p>
+                <ul>
+                    <li>Definição de regras de entrada e saída.</li>
+                    <li>Controle de acesso baseado em IP e protocolo.</li>
+                    <li>Gerenciamento de acesso em tempo real.</li>
+                </ul>
+            </div>
+
+            <div class="sub-section">
+                <h2>EC2 User Data</h2>
+                <p>
+                    O EC2 User Data é uma funcionalidade que permite executar scripts durante a inicialização da instância. Isso pode ser utilizado para configurar automaticamente a instância, instalar software ou realizar outras tarefas essenciais na primeira vez que a instância é iniciada.
+                </p>
+            </div>
+
+            <h2>Acesso SSH</h2>
+            <p>
+                O acesso SSH (Secure Shell) permite que você inicie um terminal em sua instância EC2 através da porta 22. Para estabelecer uma conexão, você deve associar suas instâncias a uma chave IAM Role, que proporciona as permissões necessárias para acessar a instância.
+            </p>
+
+            <h2>Modelos de Compra</h2>
+            <p>
+                A Amazon EC2 oferece diferentes opções de compra para atender a diversas necessidades de custo e desempenho:
+            </p>
+            <ul>
+                <li><strong>On-Demand Instances:</strong> Pague pelas instâncias que usar, sem necessidade de compromissos a longo prazo.</li>
+                <li><strong>Spot Instances:</strong> Adquira capacidade de computação não utilizada com descontos significativos. Ideal para cargas de trabalho flexíveis.</li>
+                <li><strong>Reserved Instances:</strong> Reserve instâncias por um período fixo (1 ou 3 anos) para obter um custo menor em troca de um compromisso a longo prazo.</li>
+            </ul>
+
+            <h2>Vantagens do Amazon EC2</h2>
+            <p>
+                O Amazon EC2 traz uma série de benefícios para empresas e desenvolvedores:
+            </p>
+            <ul>
+                <li><strong>Escalabilidade:</strong> Adicione ou remova instâncias rapidamente conforme a demanda de carga de trabalho.</li>
+                <li><strong>Flexibilidade:</strong> Selecione o sistema operacional, tipo de instância e configuração de hardware que atendem suas necessidades.</li>
+                <li><strong>Custo-Efetividade:</strong> Pague apenas pelo que usa, evitando investimentos iniciais em hardware.</li>
+                <li><strong>Alta Disponibilidade:</strong> Distribua suas instâncias em várias zonas de disponibilidade para garantir a resiliência.</li>
+            </ul>
+
+            <h2>Considerações Finais</h2>
+            <p>
+                O Amazon EC2 é uma ferramenta essencial para qualquer desenvolvedor ou empresa que busca aproveitar a computação em nuvem. Com sua ampla gama de opções e flexibilidade, ele permite que você execute suas aplicações com eficiência e segurança.
+            </p>
+        </div>
+    </main>
+
+    <footer-placeholder></footer-placeholder>
+    <script src="../js/load-footer.js"></script>
+</body>
+</html>
