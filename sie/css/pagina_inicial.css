@@ -45,7 +45,8 @@
   
   /* Estilo para as imagens */
   .div-2 img, .div-4 img {
-    width: calc(15% - 20px); /* Largura para garantir que 6 imagens caibam em uma linha */
+    width: calc(100% / 6 - 20px); /* Define o tamanho de cada imagem */
+    max-width: 130px; /* Limita a largura máxima de cada imagem */
     height: auto;
     margin: 10px;
     border-radius: 4px;
@@ -58,13 +59,15 @@
   
   /* Estilo para a grade de imagens */
   .image-grid {
+    margin-top: 70px;
+    margin-bottom: 70px;
     display: flex;
-    flex-wrap: wrap; /* Permite que as imagens quebrem para a linha seguinte se necessário */
-    gap: 10px; /* Espaço entre as imagens */
+    flex-wrap: wrap; /* Permite quebrar em múltiplas linhas */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    gap: 40px; /* Ajuste o espaçamento entre as imagens */
   }
-  
+    
   .image-grid img {
-    width: calc(15% - 10px); /* Ajusta a largura das imagens com base na quantidade */
-    height: auto; /* Mantém a proporção das imagens */
-    border-radius: 4px;
+    width: calc(100% / 6 - 20px); /* Define o tamanho de cada imagem */
+    max-width: 130px; /* Limita a largura máxima de cada imagem */
   }
