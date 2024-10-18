@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imgs/header/fiveicon.png" type="image/x-icon"> <!-- Favicon -->
+    <title>Clouds - Amazon S3</title>
+    <link rel="stylesheet" href="../css/topico7s3.css"> <!-- Estilo da página -->
+    <link rel="stylesheet" href="../css/footer.css"> <!-- Importação do CSS do footer -->
+    <link rel="stylesheet" href="../css/estilo-comum.css"> <!-- Importação do CSS comum -->
+</head>
+
+<body>
+    <header-placeholder></header-placeholder> <!-- Espaço reservado para o cabeçalho -->
+    <script src="../js/load-header.js"></script> <!-- JS para carregar o cabeçalho -->
+
+    <main class="sobre-container">
+        <div class="imagem-container">
+            <img src="../imgs/topicos/s3.png" alt="Amazon S3">
+        </div>
+
+        <div class="texto-container">
+            <h2>Amazon S3 - Simple Storage Service</h2>
+            <p>
+                O Amazon S3 (Simple Storage Service) é uma solução de armazenamento de objetos da AWS que oferece escalabilidade, segurança, disponibilidade e desempenho. Ele é usado para armazenar e recuperar qualquer quantidade de dados, a qualquer momento e de qualquer lugar na web.
+            </p>
+
+            <h2>Buckets e Objetos</h2>
+            <p>
+                No S3, os dados são armazenados em "buckets", que são contêineres para objetos. Um bucket possui um nome global exclusivo e está vinculado a uma região específica da AWS, garantindo o controle sobre onde os dados serão armazenados fisicamente.
+            </p>
+            <ul>
+                <li><strong>Bucket:</strong> Contêiner de objetos (arquivos e metadados).</li>
+                <li><strong>Objetos:</strong> Arquivos armazenados dentro de buckets, com identificador exclusivo (chave).</li>
+                <li><strong>Nome global único:</strong> O nome do bucket deve ser único em todas as contas da AWS.</li>
+            </ul>
+
+            <h2>Segurança no S3</h2>
+            <p>
+                O Amazon S3 oferece várias opções de segurança para proteger seus dados:
+            </p>
+            <ul>
+                <li><strong>Política IAM:</strong> Controla o acesso ao S3 através de usuários e grupos IAM.</li>
+                <li><strong>Política de Bucket:</strong> Definições para permitir ou restringir o acesso ao bucket, permitindo por exemplo a configuração de acesso público ou privado.</li>
+                <li><strong>Criptografia:</strong> Os dados podem ser criptografados em repouso (usando SSE-S3, SSE-KMS, ou SSE-C) e em trânsito (com SSL/TLS).</li>
+            </ul>
+
+            <h2>Hospedagem de Websites Estáticos</h2>
+            <p>
+                O S3 pode ser configurado para hospedar websites estáticos, oferecendo uma solução econômica e escalável para servir conteúdo estático diretamente da nuvem. É ideal para sites que não precisam de backend dinâmico.
+            </p>
+
+            <h2>Versionamento no S3</h2>
+            <p>
+                O versionamento no S3 permite manter várias versões de um objeto dentro do mesmo bucket. Isso ajuda a proteger contra exclusões acidentais e a restaurar versões anteriores de arquivos.
+            </p>
+
+            <h2>Replicação do S3</h2>
+            <p>
+                A replicação permite que você copie objetos entre buckets em diferentes regiões (replicação entre regiões) ou dentro da mesma região (replicação dentro da região). Para habilitar a replicação, o versionamento deve estar ativado no bucket de origem.
+            </p>
+
+            <h2>Classes de Armazenamento do S3</h2>
+            <p>
+                O S3 oferece várias classes de armazenamento que permitem otimizar os custos de acordo com a frequência de acesso aos dados:
+            </p>
+            <ul>
+                <li><strong>S3 Standard:</strong> Armazenamento para dados frequentemente acessados.</li>
+                <li><strong>S3 Intelligent-Tiering:</strong> Otimiza custos automaticamente movendo dados entre camadas de armazenamento de acordo com o padrão de acesso.</li>
+                <li><strong>S3 Standard-IA (Infrequent Access):</strong> Ideal para dados acessados com menos frequência, mas que precisam estar disponíveis rapidamente quando solicitados.</li>
+                <li><strong>S3 One Zone-IA:</strong> Armazenamento de baixo custo para dados infrequentes, mas que não requerem replicação em múltiplas zonas de disponibilidade.</li>
+                <li><strong>Amazon S3 Glacier:</strong> Armazenamento de longo prazo com acesso mais lento, usado para arquivamento a um custo muito baixo.</li>
+                <li><strong>Amazon S3 Glacier Deep Archive:</strong> A opção mais econômica para arquivamento de dados que raramente são acessados.</li>
+            </ul>
+
+            <h2>Família Snow e OpsHub</h2>
+            <p>
+                A Família Snow oferece dispositivos físicos (como o Snowball e Snowmobile) que permitem a importação e exportação de grandes volumes de dados para o S3. É útil quando a conectividade de rede é limitada ou muito lenta.
+            </p>
+            <p>
+                O <strong>OpsHub</strong> é um aplicativo de desktop que facilita o gerenciamento dos dispositivos da Família Snow, permitindo a transferência de dados de forma eficiente.
+            </p>
+
+            <h2>Amazon S3 Storage Gateway</h2>
+            <p>
+                O Storage Gateway é uma solução híbrida que integra o armazenamento local com o Amazon S3, permitindo que empresas utilizem o S3 para backup, arquivamento e recuperação de desastres, enquanto mantêm seus dados acessíveis localmente.
+            </p>
+        </div>
+    </main>
+
+    <footer-placeholder></footer-placeholder>
+    <script src="../js/load-footer.js"></script>
+</body>
+</html>
